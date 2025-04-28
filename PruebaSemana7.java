@@ -4,7 +4,7 @@
  */
 /**
  *
- * @author Joaquín Gómez Flores
+ * @author JoaquÃ­n GÃ³mez Flores
  */
 package pruebasemana7;
 import java.util.Scanner;
@@ -25,7 +25,7 @@ public class PruebaSemana7 {
         }
         
         public void mostrarVenta() {
-            System.out.println("Ubicación: " + ubicacion + " | Precio Final: $" + precioFinal + " | Descuento: " + tipoDescuento);
+            System.out.println("UbicaciÃ³n: " + ubicacion + " | Precio Final: $" + precioFinal + " | Descuento: " + tipoDescuento);
         }
     }
 
@@ -39,7 +39,7 @@ public class PruebaSemana7 {
         double dctoEst = 0.9;
         double dctoAm = 0.85;
                 
-        Venta[] ventas = new Venta[50]; // arreglo para guardar hasta 50 ventas
+        Venta[] ventas = new Venta[50];
         int ventasRealizadas = 0;
         
         System.out.println("*******************************************");
@@ -48,7 +48,7 @@ public class PruebaSemana7 {
         
         boolean continuar = true;
         while (continuar) {
-            System.out.println("\nSeleccione qué desea hacer: ");
+            System.out.println("\nSeleccione quÃ© desea hacer: ");
             System.out.println("1. Venta de Entradas");
             System.out.println("2. Visualizar Resumen de ventas");
             System.out.println("3. Generar Boleta");
@@ -57,11 +57,11 @@ public class PruebaSemana7 {
 
             try {
                 int menuNum = sc.nextInt();
-                sc.nextLine(); // limpiar salto
+                sc.nextLine();
                 switch (menuNum) {
                     case 1:
-                        System.out.println("\nSeleccionaste la opción 1: Venta de Entradas");
-                        System.out.println("Ahora selecciona la ubicación que deseas comprar:");
+                        System.out.println("\nSeleccionaste la opciÃ³n 1: Venta de Entradas");
+                        System.out.println("Ahora selecciona la ubicaciÃ³n que deseas comprar:");
                         System.out.println("1. VIP ($30.000)");
                         System.out.println("2. Platea Baja ($15.000)");
                         System.out.println("3. Platea Alta ($18.000)");
@@ -77,11 +77,11 @@ public class PruebaSemana7 {
                             case 3: ubicacion = "Platea Alta"; precioBase = pAlta; break;
                             case 4: ubicacion = "Palco"; precioBase = palco; break;
                             default:
-                                System.out.println("Opción no válida. Volviendo al menú principal.");
+                                System.out.println("OpciÃ³n no vÃ¡lida. Volviendo al menÃº principal.");
                                 continue;
                         }
 
-                        System.out.println("¿Es estudiante? (1. Sí / 2. No)");
+                        System.out.println("Â¿Es estudiante? (1. SÃ­ / 2. No)");
                         int esEstudiante = sc.nextInt();
                         sc.nextLine();
 
@@ -92,7 +92,7 @@ public class PruebaSemana7 {
                             descuento = dctoEst;
                             tipoDescuento = "Estudiante";
                         } else {
-                            System.out.println("¿Es persona de la tercera edad? (1. Sí / 2. No)");
+                            System.out.println("Â¿Es persona de la tercera edad? (1. SÃ­ / 2. No)");
                             int esTerceraEdad = sc.nextInt();
                             sc.nextLine();
                             if (esTerceraEdad == 1) {
@@ -108,12 +108,12 @@ public class PruebaSemana7 {
                             System.out.println("Venta realizada exitosamente:");
                             ventas[ventasRealizadas - 1].mostrarVenta();
                         } else {
-                            System.out.println("No se pueden registrar más ventas (límite alcanzado).");
+                            System.out.println("No se pueden registrar mÃ¡s ventas (lÃ­mite alcanzado).");
                         }
                         break;
                         
                     case 2:
-                        System.out.println("\nSeleccionaste la opción 2, Visualizar Resumen de ventas");
+                        System.out.println("\nSeleccionaste la opciÃ³n 2, Visualizar Resumen de ventas");
                         System.out.println("Resumen de ventas realizadas:");
                         if (ventasRealizadas == 0) {
                             System.out.println("No hay ventas registradas.");
@@ -125,7 +125,7 @@ public class PruebaSemana7 {
                         break;
                         
                     case 3:
-                        System.out.println("\nSeleccionaste la opción 3, Generar Boleta:");
+                        System.out.println("\nSeleccionaste la opciÃ³n 3, Generar Boleta:");
                         if (ventasRealizadas == 0) {
                             System.out.println("No hay ventas para generar boleta.");
                         } else {
@@ -152,7 +152,7 @@ public class PruebaSemana7 {
                         } else if (venta.tipoDescuento.equals("Adulto Mayor")) {
                             porcentajeDescuento = 15;
                         }
-                        System.out.println("Ubicación: " + venta.ubicacion);
+                        System.out.println("UbicaciÃ³n: " + venta.ubicacion);
                         System.out.println("Valor Base: $" + (int)costoBase);
                         System.out.println("Descuento Aplicado: " + porcentajeDescuento + "%");
                         System.out.println("Valor Final: $" + (int)venta.precioFinal);
@@ -167,7 +167,7 @@ public class PruebaSemana7 {
                         break;
                                                 
                     case 4:
-                        System.out.println("\nSeleccionaste la opción 4, Calcular Ingresos Totales");
+                        System.out.println("\nSeleccionaste la opciÃ³n 4, Calcular Ingresos Totales");
                         double ingresosTotales = 0;
                         for (int i = 0; i < ventasRealizadas; i++) {
                             ingresosTotales += ventas[i].precioFinal;
@@ -176,20 +176,20 @@ public class PruebaSemana7 {
                         break;     
                         
                     case 5:
-                        System.out.println("\nSeleccionaste la opción 5, Salir.");
+                        System.out.println("\nSeleccionaste la opciÃ³n 5, Salir.");
                         System.out.println("Gracias por su compra, nos vemos pronto!");
                         continuar = false;
                         break;
 
                     default:
-                        System.out.println("Opción no válida.");
-                        System.out.println("Favor, selecciona una opción entre los numeros 1-5");
+                        System.out.println("OpciÃ³n no vÃ¡lida.");
+                        System.out.println("Favor, selecciona una opciÃ³n entre los numeros 1-5");
                         break;    
                 }
             } catch (Exception e) {
-            System.out.println("Entrada inválida.");
-            System.out.println("Recuerda que la respuesta solo utiliza números enteros");
-            System.out.println("Favor, selecciona una opción entre los numeros 1-5");
+            System.out.println("Entrada invÃ¡lida.");
+            System.out.println("Recuerda que la respuesta solo utiliza nÃºmeros enteros");
+            System.out.println("Favor, selecciona una opciÃ³n entre los numeros 1-5");
             sc.nextLine();
             }
         }
